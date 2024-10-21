@@ -5,32 +5,74 @@ draft_docs: vault
 site_dir: docs
 
 theme:
-  name: mkdocs
-  custom_dir: theme/
+  name: landing
 
-  favicon: 
   avatar: assets/avatar.png
+  background: fixed center/cover url(assets/starmap.png)
+
   tagline: |
     he/him /[bɛnʤʌmɪn æmbrəʊz](http://ipa-reader.xyz/?text=bɛnʤʌmɪn%20æmbrəʊz)/
   footer: |
       Compiled from markdown using [MkDocs](https://www.mkdocs.org/), hosted via [GitHub Pages](https://pages.github.com/). Theme by [Todd Parsons](https://toddparsons.co.uk).
   page_source: 
-    link: https://benjaminambrose.github.io/benambrose/
-    icon: github
+    link: https://github.com/benjaminambrose/benambrose/
   socials:
     - label: Email
       link: mailto:b.ambrose@lms.mrc.ac.uk
       icon: at
     - label: GitHub
       link: https://github.com/BenjaminAmbrose
-      icon: github
+      icon: [brands, github]
     - label: Google Scholar
       link: https://scholar.google.com/citations?user=q_Xfc3sAAAAJ&hl=en
-      icon: google-scholar
+      icon: [brands, google-scholar]
+  
+  # style options
+  header_layout:
+    - avatar
+    - socials
+    - title
+    - tagline    
+  content_box_opacity: 0
+  avatar_size: 8rem
+  round_avatar: True
+  background_gradient_colors: 
+    - color-mix(in srgb, var(--crust) 100%, transparent)
+    - color-mix(in srgb, var(--base) 80%, transparent)
+  
+  # colours
+  primary_color: "#dd7878"
+  secondary_color: "#7287fd"
+  tertiary_color: "#dd7878"
+  # shades
+  base_color: "#24273a"
+  mantle_color: "#1e2030"
+  crust_color: "#181926"
+  overlay_color: "#9B9B9E"
+  # text
+  text_color: "#c6d0f5"
+  hltext_color: "#24273a"
+  
+  # colours (dark)
+  primary_color_dark: "#dd7878"
+  secondary_color_dark: "#7287fd"
+  tertiary_color_dark: "#dd7878"
+  # shades (dark)
+  base_color_dark: "#24273a"
+  mantle_color_dark: "#1e2030"
+  crust_color_dark: "#181926"
+  overlay_color_dark: "#9B9B9E"
+  # text (dark)
+  text_color_dark: "#c6d0f5"
+  hltext_color_dark: "#24273a"
+  
+  #fonts
+  body_font: Maven Pro
+  heading_font: Oswald
 
 hooks:
-  - theme/hooks/md_filter.py
-  - theme/hooks/layout.py
+  - hooks/md_filter.py
+  - hooks/layout.py
 
 markdown_extensions:
   - toc
