@@ -5,38 +5,87 @@ draft_docs: vault
 site_dir: docs
 
 theme:
-  name: mkdocs
-  custom_dir: theme/
+  name: landing
 
-  favicon: 
   avatar: assets/20250831_182012_2.jpg
+  background: fixed center/cover url(assets/starmap.png)
+
   tagline: |
     he/him /[bɛnʤʌmɪn æmbrəʊz](https://ipa-reader.com/?text=b%C9%9Bn%CA%A4%CA%8Cm%C9%AAn%20%C3%A6mbr%C9%99%CA%8Az)/
   footer: |
       Compiled from markdown using [MkDocs](https://www.mkdocs.org/), hosted via [GitHub Pages](https://pages.github.com/). Theme by [Todd Parsons](https://toddparsons.co.uk).
   page_source: 
     link: https://github.com/BenjaminAmbrose/benambrose
-    icon: github
   socials:
     - label: Email
       link: mailto:b.ambrose@lms.mrc.ac.uk
-      icon: at
+      icon: [solid, at]
     - label: GitHub
       link: https://github.com/BenjaminAmbrose
-      icon: github
+      icon: [brands, github]
     - label: Google Scholar
       link: https://scholar.google.com/citations?user=q_Xfc3sAAAAJ&hl=en
-      icon: google-scholar
+      icon: [brands, google-scholar]
     - label: ORCID
       link: https://orcid.org/0000-0002-5046-2532
-      icon: orcid
+      icon: [brands, orcid]
     - label: Bluesky
       link: https://bsky.app/profile/single-mole.bsky.social
-      icon: bluesky
+      icon: [brands, bluesky]
+  
+  # style options
+  header_layout:
+    - avatar
+    - socials
+    - title
+    - tagline    
+  content_box_opacity: 0
+  avatar_size: 12rem
+  round_avatar: False
+  background_gradient_colors: 
+    - color-mix(in srgb, var(--crust) 100%, transparent)
+    - color-mix(in srgb, var(--base) 80%, transparent)
+  
+  # colours
+  primary_color: "#dd7878"
+  secondary_color: "#7287fd"
+  tertiary_color: "#dd7878"
+  # shades
+  base_color: "#24273a"
+  mantle_color: "#1e2030"
+  crust_color: "#181926"
+  overlay_color: "#9B9B9E"
+  # text
+  text_color: "#c6d0f5"
+  hltext_color: "#24273a"
+  
+  # colours (dark)
+  primary_color_dark: "#dd7878"
+  secondary_color_dark: "#7287fd"
+  tertiary_color_dark: "#dd7878"
+  # shades (dark)
+  base_color_dark: "#24273a"
+  mantle_color_dark: "#1e2030"
+  crust_color_dark: "#181926"
+  overlay_color_dark: "#9B9B9E"
+  # text (dark)
+  text_color_dark: "#c6d0f5"
+  hltext_color_dark: "#24273a"
+  
+  #fonts
+  body_font: Maven Pro
+  heading_font: Oswald
 
 hooks:
-  - theme/hooks/md_filter.py
-  - theme/hooks/layout.py
+  - hooks/md_filter.py
+  - hooks/layout.py
+  - hooks/charset.py
+
+# site-specific additions on top of the landing theme
+extra_css:
+  - assets/extra.css
+extra_javascript:
+  - assets/autoplay.js
 
 markdown_extensions:
   - toc
