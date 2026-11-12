@@ -9,13 +9,13 @@ theme:
   custom_dir: theme/
 
   favicon: 
-  avatar: assets/avatar.png
+  avatar: assets/20250831_182012_2.jpg
   tagline: |
-    he/him /[bɛnʤʌmɪn æmbrəʊz](http://ipa-reader.xyz/?text=bɛnʤʌmɪn%20æmbrəʊz)/
+    he/him /[bɛnʤʌmɪn æmbrəʊz](https://ipa-reader.com/?text=b%C9%9Bn%CA%A4%CA%8Cm%C9%AAn%20%C3%A6mbr%C9%99%CA%8Az)/
   footer: |
       Compiled from markdown using [MkDocs](https://www.mkdocs.org/), hosted via [GitHub Pages](https://pages.github.com/). Theme by [Todd Parsons](https://toddparsons.co.uk).
   page_source: 
-    link: https://benjaminambrose.github.io/benambrose/
+    link: https://github.com/BenjaminAmbrose/benambrose
     icon: github
   socials:
     - label: Email
@@ -27,6 +27,12 @@ theme:
     - label: Google Scholar
       link: https://scholar.google.com/citations?user=q_Xfc3sAAAAJ&hl=en
       icon: google-scholar
+    - label: ORCID
+      link: https://orcid.org/0000-0002-5046-2532
+      icon: orcid
+    - label: Bluesky
+      link: https://bsky.app/profile/single-mole.bsky.social
+      icon: bluesky
 
 hooks:
   - theme/hooks/md_filter.py

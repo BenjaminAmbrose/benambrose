@@ -103,18 +103,22 @@ article {
 #header {
     display: grid;
     align-items: end;
-    grid-template-columns: 8rem auto;
+    grid-template-columns: auto 1fr;
+    column-gap: 2rem;
+}
+
+/* Everything except the photo sits in the right column */
+#header > :not(#avatar) {
+    grid-column: 2;
 }
 
 #title, #title a {
-    grid-column-end: span 2;
     font-size: 6rem;
     margin: 1rem 0;
     color: var(--text);
     line-height: 1em;
 }
 #tagline, #tagline a {
-    grid-column-end: span 2;
     font-family: var(--heading);
     font-size: 1.5rem;
     color: var(--primary);
@@ -127,9 +131,16 @@ article {
     font-size: 2rem;
 }
 #avatar {
+    /* Portrait photo in the top-left corner, spanning the socials, name and tagline rows */
+    grid-column: 1;
+    grid-row: 1 / span 3;
+    align-self: start;
+    width: clamp(7rem, 25vw, 12rem);
+    aspect-ratio: 2 / 3;
     object-fit: cover;
-    margin: 0 1rem 0 0;
-    border-radius: 50%;
+    object-position: center 25%;
+    margin: 0;
+    border-radius: 1rem;
     box-shadow: 0 0 2rem var(--shadow);
 }
 
@@ -240,3 +251,13 @@ pre {
 
 
 
+
+video {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    margin: 1rem 0;
+    border-radius: 1rem;
+    box-shadow: 0 0 1rem var(--shadow);
+    background-color: black;
+}

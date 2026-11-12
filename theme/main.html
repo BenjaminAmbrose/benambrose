@@ -2,10 +2,13 @@
 <html>
 
 <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{% if page.title %}{{ page.title }} - {% endif %}{{ config.site_name }}</title>
-  <link rel="icon" type="image/x-icon" href={{ config.theme.favicon }}>
+  {% if config.theme.favicon %}<link rel="icon" href="{{ config.theme.favicon | url }}">{% endif %}
   <link href="{{ 'css/style.css' | url }}" rel="stylesheet">
   <link href="{{ 'css/responsivity.css' | url }}" rel="stylesheet">
+  <script src="{{ 'js/autoplay.js' | url }}" defer></script>
   {%- for path in config.extra_css %}
   <link href="{{ path | url }}" rel="stylesheet">
   {%- endfor %}
@@ -17,7 +20,7 @@
 <body id="background">
   <content id="content">
   <header id="header">
-    <img id="avatar" src="{{ config.theme.avatar | url }}" />
+    <img id="avatar" src="{{ config.theme.avatar | url }}" alt="Photo of {{ config.site_name }}" />
     <nav id="socials">
       {% for social in config.theme.socials %}
       <a href={{ social.link }}><i class="fa-brands fa-{{ social.icon }}" alt={{ social.label }}></i></a>
