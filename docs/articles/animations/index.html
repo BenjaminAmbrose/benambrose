@@ -1,0 +1,291 @@
+<!-- 
+Included only for legacy purposes, this template is no different than main.html as the distinction between homepage and articles is now inferred from file location. 
+-->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Molecular animations - Benjamin Ambrose</title>
+    <style>
+      /* load heading font */
+      @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400');
+      @import url('https://fonts.googleapis.com/css2?family=Oswald:ital,wght@400');
+      @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700');
+      @import url('https://fonts.googleapis.com/css2?family=Oswald:ital,wght@700');
+
+      /* load body font */
+      @import url('https://fonts.googleapis.com/css2?family=Maven Pro:wght@400');
+      @import url('https://fonts.googleapis.com/css2?family=Maven Pro:ital,wght@400');
+      @import url('https://fonts.googleapis.com/css2?family=Maven Pro:wght@700');
+      @import url('https://fonts.googleapis.com/css2?family=Maven Pro:ital,wght@700');
+
+      /* load mono font */
+      @import url('https://fonts.googleapis.com/css2?family=JetBrains Mono:wght@400');
+      @import url('https://fonts.googleapis.com/css2?family=JetBrains Mono:ital,wght@400');
+      @import url('https://fonts.googleapis.com/css2?family=JetBrains Mono:wght@700');
+      @import url('https://fonts.googleapis.com/css2?family=JetBrains Mono:ital,wght@700');
+
+      /* load emoji font */
+      @font-face {
+        font-family: "Noto Color Emoji";
+        src: url('../../assets/fonts/emoji/NotoColorEmoji-Regular.ttf');
+        font-weight: 400;
+      }
+  
+      :root {
+        /* colors */
+        --primary: #dd7878;
+        --secondary: #7287fd;
+        --tertiary: #dd7878;
+        /* shades */
+        --base: #24273a;
+        --mantle: #1e2030;
+        --crust: #181926;
+        --overlay: #9B9B9E;
+        --footer: #000000cc;
+        /* text */
+        --text: #c6d0f5;
+        --hltext: #24273a;
+        color: var(--text);
+        /* background-specific text */
+        --primary-text: var(--hltext);
+        --secondary-text: var(--hltext);
+        --tertiary-text: var(--hltext);
+        --base-text: var(--text);
+        --mantle-text: var(--text);
+        --crust-text: var(--text);
+        --overlay-text: var(--hltext);
+        --footer-text: var(--hltext);
+        /* fonts */
+        --heading: Oswald, Noto Color Emoji;
+        --body: Maven Pro, Noto Color Emoji;
+        --mono: JetBrains Mono, Noto Color Emoji;
+        font-family: var(--body); 
+      }
+      /* dark mode */
+      @media (prefers-color-scheme: dark) {
+        :root {
+          /* colors */
+          --primary: #dd7878;
+          --secondary: #7287fd;
+          --tertiary: #dd7878;
+          /* shades */
+          --base: #24273a;
+          --mantle: #1e2030;
+          --crust: #181926;
+          --overlay: #9B9B9E;
+          --footer: #00000022;
+          /* text */
+          --text: #c6d0f5;
+          --hltext: #24273a;
+          color: var(--text);
+          /* background-specific text */
+          --primary-text: var(--text);
+          --secondary-text: var(--text);
+          --tertiary-text: var(--text);
+          --base-text: var(--text);
+          --mantle-text: var(--text);
+          --crust-text: var(--text);
+          --overlay-text: var(--hltext);
+          --footer-text: var(--text);
+        }
+      }
+      /* style settings */
+      header#header {
+        grid-template-columns: 12rem auto 12rem;
+      }
+      body#background {
+        background: fixed center/cover url(assets/starmap.png);
+        
+        
+      }
+      #background-gradient {
+        background: linear-gradient(
+          45deg, 
+          color-mix(in srgb, var(--crust) 100%, transparent), color-mix(in srgb, var(--base) 80%, transparent)
+        );
+      }
+      content#content {
+        padding: 0 3rem;
+        background: color-mix(in srgb, var(--base) 0, transparent);
+        border-left: none;
+        border-right: none;
+      }
+      #avatar {
+        
+        border-radius: 1rem;
+        
+      }
+      footer#footer a {
+        color: #7287fd;
+      }
+      footer#footer a:hover {
+        color: #dd7878;
+      }
+    </style>
+    <link rel="icon" type="image/x-icon" href=assets/landing-favicon.png>
+    <link href="../../css/style.css" rel="stylesheet">
+    <link href="../../css/responsivity.css" rel="stylesheet">
+    <link href="../../assets/extra.css" rel="stylesheet">  
+    <script src="../../assets/autoplay.js"></script>  
+    <script src="../../search/main.js"></script>
+    <script src="https://kit.fontawesome.com/b57355f8ac.js" crossorigin="anonymous"></script>
+    <script id="altmetric-embed-js" src="https://d1bxh8uas1mnw7.cloudfront.net/assets/altmetric_badges-e7ba41a192efc3e63f5d48f8a1916dec4b1b49c01075bc7b39481408957b3b28.js"></script>
+    <link id="altmetric-embed-css" rel="stylesheet" type="text/css" href="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed-59614f5c46b49b21eeef3bb28c4fb38d1e7069e8d014752fcb66e84942556802.css">
+    <script>
+      function on_share() {
+        navigator.share({
+          url: document.URL,
+          title: "Molecular animations -Benjamin Ambrose",
+        });
+      }
+    </script>
+</head>
+
+<body id="background">
+  <div id="background-gradient"></div>
+  <content id="content">
+  
+<a id="share-btn" onclick="on_share()">
+  <i class="fa fa-share-alt" alt="🔗"></i>
+</a>
+
+  
+  <header id="article-header">
+    <a href=../.. id="return-home">
+        <i class="fa fa-arrow-left" alt="⇦"></i> Home
+    </a>
+    <h1 id="title">Molecular animations</h1>
+</header>
+  
+  <main id="page">
+    <nav class="vertical" id="toc">
+
+<ul>
+
+<li class="nav-item">
+<a href="#ino80-on-a-nucleosome">INO80 on a nucleosome</a>
+    
+    <ul>
+    
+    </ul>
+    
+</li>
+
+<li class="nav-item">
+<a href="#rep-helicase-with-fret-dyes">Rep helicase with FRET dyes</a>
+    
+    <ul>
+    
+    </ul>
+    
+</li>
+
+<li class="nav-item">
+<a href="#swr1-nucleosome-flipping">SWR1 nucleosome flipping</a>
+    
+    <ul>
+    
+    </ul>
+    
+</li>
+
+<li class="nav-item">
+<a href="#crisprcas9-on-a-dna-minicircle">CRISPR–Cas9 on a DNA minicircle</a>
+    
+    <ul>
+    
+    </ul>
+    
+</li>
+
+<li class="nav-item">
+<a href="#ankle1-endonuclease">ANKLE1 endonuclease</a>
+    
+    <ul>
+    
+    </ul>
+    
+</li>
+
+</ul>
+
+</nav>
+    <!--
+To add a new animation:
+  1. Put the .mp4 (H.264) in src/moleculeanims/
+  2. Copy one of the blocks below (from one triple-at line to the next), then change the title,
+     description, link and file name. Never type three at-signs in a row anywhere else on the page.
+     The src path is relative to this page, so it always starts with ../../moleculeanims/
+-->
+
+<p>All of these animations were made in <a href="https://www.blender.org/">Blender</a> using the <a href="https://bradyajohnston.github.io/MolecularNodes/">Molecular Nodes</a> add-on by <a href="https://github.com/BradyAJohnston">Brady Johnston</a>.</p>
+<article>
+<h3 id="ino80-on-a-nucleosome">INO80 on a nucleosome</h3>
+<video controls="controls" loop="loop" muted="muted" playsinline="playsinline" preload="metadata" src="../../moleculeanims/INO80.mp4"></video>
+<p>An animation of the chromatin remodeller INO80 on a nucleosome.</p>
+<p>Related paper: <strong>Ambrose B</strong>, et al. <em>INO80 rapidly shuttles nucleosomes between chromatin barriers.</em> bioRxiv (2026). <a href="https://doi.org/10.64898/2026.09.20.752975">DOI: 10.64898/2026.09.20.752975</a></p>
+</article>
+<article>
+<h3 id="rep-helicase-with-fret-dyes">Rep helicase with FRET dyes</h3>
+<video controls="controls" loop="loop" muted="muted" playsinline="playsinline" preload="metadata" src="../../moleculeanims/repvidwithglo0001-0600.mp4"></video>
+<p>An animation of the DNA helicase Rep, labelled with a pair of FRET dyes. Rep switches between open and closed conformations, which changes the distance between the dyes. That changes the FRET efficiency, and so how brightly each dye shines.</p>
+<p>Related paper: Howard JAL, Ambrose B, et al. <em>The transitional kinetics between open and closed Rep structures can be tuned by salt via two intermediate states.</em> Nucleic Acids Research (2026). <a href="https://doi.org/10.1093/nar/gkaf1483">DOI: 10.1093/nar/gkaf1483</a></p>
+</article>
+<article>
+<h3 id="swr1-nucleosome-flipping">SWR1 nucleosome flipping</h3>
+<video controls="controls" loop="loop" muted="muted" playsinline="playsinline" preload="metadata" src="../../moleculeanims/swr1flip.mp4"></video>
+<p>An animation of the chromatin remodeller SWR1 and nucleosome flipping.</p>
+<p>Related paper: Girvan P, et al. <em>Nucleosome flipping drives kinetic proofreading and processivity by SWR1.</em> Nature (2024). <a href="https://doi.org/10.1038/s41586-024-08152-y">DOI: 10.1038/s41586-024-08152-y</a></p>
+</article>
+<article>
+<h3 id="crisprcas9-on-a-dna-minicircle">CRISPR–Cas9 on a DNA minicircle</h3>
+<video controls="controls" loop="loop" muted="muted" playsinline="playsinline" preload="metadata" src="../../moleculeanims/Cas9.mp4"></video>
+<p>An animation of CRISPR–Cas9 on a DNA minicircle.</p>
+<p>Related paper: Smith, et al. <em>Structural basis of supercoiling-induced CRISPR–Cas9 off-target activity.</em> Nature (2026). <a href="https://doi.org/10.1038/s41586-026-10255-7">DOI: 10.1038/s41586-026-10255-7</a></p>
+</article>
+<article>
+<h3 id="ankle1-endonuclease">ANKLE1 endonuclease</h3>
+<video controls="controls" loop="loop" muted="muted" playsinline="playsinline" preload="metadata" src="../../moleculeanims/ankle1.mp4"></video>
+<p>An animation of the ultrafine-bridge-associated endonuclease ANKLE1 on DNA.</p>
+<p>Related paper: Ray, et al. <em>The ultrafine-bridge-associated endonuclease ANKLE1 is stimulated by tension in DNA to process branch-points.</em> Nucleic Acids Research (2026). <a href="https://doi.org/10.1093/nar/gkag585">DOI: 10.1093/nar/gkag585</a></p>
+</article>
+    <nav id="page-controls">
+      <a href="#content" id="return-top">
+        <i class="fa fa-arrow-up" alt="⇧"></i> Return to top
+      </a>
+    </nav>
+  </main>
+  </content>
+  <footer id="footer">
+    
+
+<p>Compiled from markdown using <a href="https://www.mkdocs.org/">MkDocs</a>, hosted via <a href="https://pages.github.com/">GitHub Pages</a>. Theme by <a href="https://toddparsons.co.uk">Todd Parsons</a>.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+<a id=page-source href=https://github.com/BenjaminAmbrose/benambrose><i class="fa-brands fa-github"></i> Page source</a>
+
+
+
+<script src="../../assets/autoplay.js"></script>
+
+<script src="../../search/main.js"></script>
+
+  </footer>
+</body>
+
+</html>

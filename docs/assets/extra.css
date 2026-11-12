@@ -1,0 +1,32 @@
+/* Site-specific tweaks on top of the landing theme */
+
+/* Header: portrait photo top-left, spanning the socials, name and tagline */
+header#header {
+    grid-template-columns: clamp(7rem, 25vw, 12rem) 1fr;
+    column-gap: 2rem;
+}
+header#header > :not(#avatar) {
+    grid-column: 2;
+}
+header#header img#avatar {
+    grid-column: 1;
+    grid-row: 1 / span 3;
+    align-self: start;
+    width: 100%;
+    min-width: 0;
+    aspect-ratio: 2 / 3;
+    object-fit: cover;
+    object-position: center 25%;
+    margin: 0;
+    border-radius: 1rem;
+}
+
+/* Animations */
+video {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    margin: 1rem 0;
+    border-radius: 1rem;
+    background-color: black;
+}

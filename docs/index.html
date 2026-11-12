@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Home - Benjamin Ambrose</title>
+    <style>
+      /* load heading font */
+      @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400');
+      @import url('https://fonts.googleapis.com/css2?family=Oswald:ital,wght@400');
+      @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700');
+      @import url('https://fonts.googleapis.com/css2?family=Oswald:ital,wght@700');
+
+      /* load body font */
+      @import url('https://fonts.googleapis.com/css2?family=Maven Pro:wght@400');
+      @import url('https://fonts.googleapis.com/css2?family=Maven Pro:ital,wght@400');
+      @import url('https://fonts.googleapis.com/css2?family=Maven Pro:wght@700');
+      @import url('https://fonts.googleapis.com/css2?family=Maven Pro:ital,wght@700');
+
+      /* load mono font */
+      @import url('https://fonts.googleapis.com/css2?family=JetBrains Mono:wght@400');
+      @import url('https://fonts.googleapis.com/css2?family=JetBrains Mono:ital,wght@400');
+      @import url('https://fonts.googleapis.com/css2?family=JetBrains Mono:wght@700');
+      @import url('https://fonts.googleapis.com/css2?family=JetBrains Mono:ital,wght@700');
+
+      /* load emoji font */
+      @font-face {
+        font-family: "Noto Color Emoji";
+        src: url('assets/fonts/emoji/NotoColorEmoji-Regular.ttf');
+        font-weight: 400;
+      }
+  
+      :root {
+        /* colors */
+        --primary: #dd7878;
+        --secondary: #7287fd;
+        --tertiary: #dd7878;
+        /* shades */
+        --base: #24273a;
+        --mantle: #1e2030;
+        --crust: #181926;
+        --overlay: #9B9B9E;
+        --footer: #000000cc;
+        /* text */
+        --text: #c6d0f5;
+        --hltext: #24273a;
+        color: var(--text);
+        /* background-specific text */
+        --primary-text: var(--hltext);
+        --secondary-text: var(--hltext);
+        --tertiary-text: var(--hltext);
+        --base-text: var(--text);
+        --mantle-text: var(--text);
+        --crust-text: var(--text);
+        --overlay-text: var(--hltext);
+        --footer-text: var(--hltext);
+        /* fonts */
+        --heading: Oswald, Noto Color Emoji;
+        --body: Maven Pro, Noto Color Emoji;
+        --mono: JetBrains Mono, Noto Color Emoji;
+        font-family: var(--body); 
+      }
+      /* dark mode */
+      @media (prefers-color-scheme: dark) {
+        :root {
+          /* colors */
+          --primary: #dd7878;
+          --secondary: #7287fd;
+          --tertiary: #dd7878;
+          /* shades */
+          --base: #24273a;
+          --mantle: #1e2030;
+          --crust: #181926;
+          --overlay: #9B9B9E;
+          --footer: #00000022;
+          /* text */
+          --text: #c6d0f5;
+          --hltext: #24273a;
+          color: var(--text);
+          /* background-specific text */
+          --primary-text: var(--text);
+          --secondary-text: var(--text);
+          --tertiary-text: var(--text);
+          --base-text: var(--text);
+          --mantle-text: var(--text);
+          --crust-text: var(--text);
+          --overlay-text: var(--hltext);
+          --footer-text: var(--text);
+        }
+      }
+      /* style settings */
+      header#header {
+        grid-template-columns: 12rem auto 12rem;
+      }
+      body#background {
+        background: fixed center/cover url(assets/starmap.png);
+        
+        
+      }
+      #background-gradient {
+        background: linear-gradient(
+          45deg, 
+          color-mix(in srgb, var(--crust) 100%, transparent), color-mix(in srgb, var(--base) 80%, transparent)
+        );
+      }
+      content#content {
+        padding: 0 3rem;
+        background: color-mix(in srgb, var(--base) 0, transparent);
+        border-left: none;
+        border-right: none;
+      }
+      #avatar {
+        
+        border-radius: 1rem;
+        
+      }
+      footer#footer a {
+        color: #7287fd;
+      }
+      footer#footer a:hover {
+        color: #dd7878;
+      }
+    </style>
+    <link rel="icon" type="image/x-icon" href=assets/landing-favicon.png>
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/responsivity.css" rel="stylesheet">
+    <link href="assets/extra.css" rel="stylesheet">  
+    <script src="assets/autoplay.js"></script>  
+    <script src="search/main.js"></script>
+    <script src="https://kit.fontawesome.com/b57355f8ac.js" crossorigin="anonymous"></script>
+    <script id="altmetric-embed-js" src="https://d1bxh8uas1mnw7.cloudfront.net/assets/altmetric_badges-e7ba41a192efc3e63f5d48f8a1916dec4b1b49c01075bc7b39481408957b3b28.js"></script>
+    <link id="altmetric-embed-css" rel="stylesheet" type="text/css" href="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed-59614f5c46b49b21eeef3bb28c4fb38d1e7069e8d014752fcb66e84942556802.css">
+    <script>
+      function on_share() {
+        navigator.share({
+          url: document.URL,
+          title: "Home -Benjamin Ambrose",
+        });
+      }
+    </script>
+</head>
+
+<body id="background">
+  <div id="background-gradient"></div>
+  <content id="content">
+  
+<a id="share-btn" onclick="on_share()">
+  <i class="fa fa-share-alt" alt="🔗"></i>
+</a>
+
+  
+  <header id="header">
+    
+    
+     
+    
+    <img id="avatar" src="assets/20250831_182012_2.jpg" />
+    
+
+    
+    
+    
+     
+    <ul id="socials">
+        
+        
+        
+        
+        
+        <li>
+            <a href="mailto:b.ambrose@lms.mrc.ac.uk"><i class="fa-solid fa-at" alt="Email"></i></a>
+            <div class="social-label">Email</div>
+        </li>
+        
+        
+        
+        
+        
+        <li>
+            <a href="https://github.com/BenjaminAmbrose"><i class="fa-brands fa-github" alt="GitHub"></i></a>
+            <div class="social-label">GitHub</div>
+        </li>
+        
+        
+        
+        
+        
+        <li>
+            <a href="https://scholar.google.com/citations?user=q_Xfc3sAAAAJ&hl=en"><i class="fa-brands fa-google-scholar" alt="Google Scholar"></i></a>
+            <div class="social-label">Google Scholar</div>
+        </li>
+        
+        
+        
+        
+        
+        <li>
+            <a href="https://orcid.org/0000-0002-5046-2532"><i class="fa-brands fa-orcid" alt="ORCID"></i></a>
+            <div class="social-label">ORCID</div>
+        </li>
+        
+        
+        
+        
+        
+        <li>
+            <a href="https://bsky.app/profile/single-mole.bsky.social"><i class="fa-brands fa-bluesky" alt="Bluesky"></i></a>
+            <div class="social-label">Bluesky</div>
+        </li>
+        
+    </ul>
+
+    
+    
+    
+     
+    <h1 id="title"><a href=.>Benjamin Ambrose</a></h1>
+
+    
+    
+    
+     
+    <p id="tagline">he/him /<a href="https://ipa-reader.com/?text=b%C9%9Bn%CA%A4%CA%8Cm%C9%AAn%20%C3%A6mbr%C9%99%CA%8Az">bɛnʤʌmɪn æmbrəʊz</a>/</p>
+
+    
+    
+</header>
+  
+  <main id="page">
+    <nav class="vertical" id="toc">
+
+<ul>
+
+<li class="nav-item">
+<a href="#who-am-i">Who am I?</a>
+    
+    <ul>
+    
+    </ul>
+    
+</li>
+
+<li class="nav-item">
+<a href="#publications">Publications</a>
+    
+    <ul>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    </ul>
+    
+</li>
+
+<li class="nav-item">
+<a href="#employment">Employment</a>
+    
+    <ul>
+    
+    
+    
+    
+    
+    </ul>
+    
+</li>
+
+<li class="nav-item">
+<a href="#education">Education</a>
+    
+    <ul>
+    
+    
+    
+    
+    
+    </ul>
+    
+</li>
+
+<li class="nav-item">
+<a href="#animations">Animations</a>
+    
+    <ul>
+    
+    
+    
+    </ul>
+    
+</li>
+
+</ul>
+
+</nav>
+    <h1 id="who-am-i">Who am I?</h1>
+<article>
+<p>I'm a biophysicist and Postdoctoral Research Associate in the <a href="https://lms.mrc.ac.uk/research-group/single-molecule-imaging/">Rueda Lab</a> at the MRC Laboratory of Medical Sciences (LMS) in London. I use single-molecule methods to watch biological machines at work. That includes smFRET, TIRF microscopy, FCS and correlative optical tweezers with fluorescence. At the moment I'm working on how chromatin remodellers such as INO80 move and position nucleosomes along DNA.</p>
+<p>I also build instruments and software. During my PhD in the Craggs Lab at the University of Sheffield, I developed the <a href="https://craggslab.github.io/smfBox/">smfBox</a>, an open-source smFRET microscope. I have since co-developed a commercial smFRET instrument and written analysis tools such as <a href="https://singlemoleculegroup.github.io/kymosketch-app/">KymoSketch</a>. I care about open science and making advanced microscopy accessible to everyone. In my spare time I like to make <a href="articles/animations/">animations of biomolecules in motion</a>. I also chair the MRC LMS Postdoctoral Committee.</p>
+</article>
+<h1 id="publications">Publications</h1>
+<article>
+<h3 id="ino80-rapidly-shuttles-nucleosomes-between-chromatin-barriers">INO80 rapidly shuttles nucleosomes between chromatin barriers</h3>
+<p><strong><a href="https://doi.org/10.64898/2026.09.20.752975">bioRxiv</a></strong> · <em>2026</em> · in review at <em>Molecular Cell</em><br />
+<strong>Ambrose B</strong>, Girvan P, Skehan MT, McCormack EA, Egharevba DI, Rueda DS</p>
+<p>Using correlative optical tweezers, fluorescence microscopy and smFRET, we show that human INO80 diffuses along DNA and, on meeting a nucleosome, slides it rapidly over thousands of base pairs in bidirectional bursts. Neighbouring nucleosomes act as barriers. They confine the mobile nucleosome to shuttling back and forth between chromatin boundaries, and two INO80 complexes can occupy a single nucleosome at the same time.</p>
+<p><a href="https://doi.org/10.64898/2026.09.20.752975">DOI: 10.64898/2026.09.20.752975</a></p>
+</article>
+<article>
+<h3 id="the-smfbox-is-an-open-source-platform-for-single-molecule-fret">The smfBox is an open-source platform for single-molecule FRET</h3>
+<p><strong><a href="https://www.nature.com/ncomms/">Nature Communications</a></strong> · <em>2020</em><br />
+<strong>Ambrose B</strong>, Baxter JM, Cully J, Willmott M, Steele EM, Bateman BC, Martin-Fernandez ML, Cadby A, Shewring J, Aaldering M, Craggs TD</p>
+<p>Single-molecule Förster Resonance Energy Transfer (smFRET) is a powerful technique capable of resolving both relative and absolute distances within and between structurally dynamic biomolecules. High instrument costs, and a lack of open-source hardware and acquisition software have limited smFRET's broad application by non-specialists. Here, we present the smfBox, a cost-effective confocal smFRET platform, providing detailed build instructions, open-source acquisition software, and full validation, thereby democratising smFRET for the wider scientific community.</p>
+<p><a href="https://doi.org/10.1038/s41467-020-19468-4">DOI: 10.1038/s41467-020-19468-4</a></p>
+</article>
+<article>
+<h3 id="the-transitional-kinetics-between-open-and-closed-rep-structures-can-be-tuned-by-salt-via-two-intermediate-states">The transitional kinetics between open and closed Rep structures can be tuned by salt via two intermediate states</h3>
+<p><strong><a href="https://academic.oup.com/nar">Nucleic Acids Research</a></strong> · <em>2026</em><br />
+Howard JAL, <strong>Ambrose B</strong>, Abdelhamid MAS, et al.</p>
+<p>Combining TCSPC, FCS, rapid smFRET, ABEL trapping and molecular dynamics, we resolve two previously hidden intermediate states between the open and closed structures of the DNA helicase Rep, whose stability is tuned by salt.</p>
+<p><a href="https://doi.org/10.1093/nar/gkaf1483">DOI: 10.1093/nar/gkaf1483</a></p>
+</article>
+<article>
+<h3 id="a-new-twist-on-pife-photoisomerisation-related-fluorescence-enhancement">A new twist on PIFE: photoisomerisation-related fluorescence enhancement</h3>
+<p><strong><a href="https://iopscience.iop.org/journal/2050-6120">Methods and Applications in Fluorescence</a></strong> · <em>2024</em><br />
+Ploetz E, <strong>Ambrose B</strong>, Barth A, Börner R, et al.</p>
+<p>A community review proposing that PIFE be renamed after its underlying mechanism, <em>photoisomerisation</em>-related fluorescence enhancement. It covers cyanine photochemistry, quantitative PIFE assays, and current and future applications.</p>
+<p><a href="https://doi.org/10.1088/2050-6120/acfb58">DOI: 10.1088/2050-6120/acfb58</a></p>
+</article>
+<p><strong><a href="articles/publications/">View all publications...</a></strong></p>
+<h1 id="employment">Employment</h1>
+<article>
+<h3 id="postdoctoral-research-associate-rueda-lab">Postdoctoral Research Associate — Rueda Lab</h3>
+<p><strong><a href="https://lms.mrc.ac.uk/">MRC Laboratory of Medical Sciences</a></strong><br />
+<em>2022 - present</em></p>
+<p>Single-molecule studies of chromatin remodelling.</p>
+<ul>
+<li>Showed that INO80 rapidly shuttles nucleosomes between chromatin barriers, using correlative optical tweezers, fluorescence microscopy and smFRET (<a href="https://doi.org/10.64898/2026.09.20.752975">preprint</a>)</li>
+<li>Nucleosome force spectroscopy with optical tweezers</li>
+<li>Built a 1D diffusion analysis pipeline and tools, including <a href="https://singlemoleculegroup.github.io/kymosketch-app/">KymoSketch</a>, and helped develop <a href="https://doi.org/10.64898/2026.05.27.727946">DeepDiffusion</a></li>
+</ul>
+</article>
+<article>
+<h3 id="research-scientist">Research Scientist</h3>
+<p><strong><a href="https://excitinginstruments.com/">Exciting Instruments Ltd.</a></strong><br />
+<em>2021 - 2022</em></p>
+<p>Developed a commercial smFRET microscope, spinning out work from my PhD in the Craggs Lab. Co-inventor on patent.</p>
+</article>
+<h1 id="education">Education</h1>
+<article>
+<h3 id="phd-chemistry-craggs-lab">PhD Chemistry — Craggs Lab</h3>
+<p><strong><a href="https://www.sheffield.ac.uk/">The University of Sheffield</a></strong><br />
+<em>2017 - 2021</em></p>
+<p>Thesis title:<br />
+<em>FRET Below and Beyond: New tools for single-molecule fluorescence studies of DNA and Proteins</em><br />
+Supervisor: Prof. Timothy D. Craggs</p>
+<ul>
+<li>Designed, built and validated the <a href="https://craggslab.github.io/smfBox/">smfBox</a>, an open-source smFRET microscope (<a href="https://doi.org/10.1038/s41467-020-19468-4">Nature Communications</a>)</li>
+<li>Single-molecule studies of DNA–protein interactions (ATL1, Rep, FEN1)</li>
+<li>Developed new single-molecule fluorescence methods, including quenching-based measurement of distances below 3 nm</li>
+</ul>
+</article>
+<article>
+<h3 id="mbiolsci-biochemistry-and-genetics">MBiolSci Biochemistry and Genetics</h3>
+<p><strong><a href="https://www.sheffield.ac.uk/">The University of Sheffield</a></strong><br />
+<em>2013 - 2017</em></p>
+<p>Masters project:<br />
+<em>Spectroscopic and microscopy studies of chromosome partitioning systems in Vibrio cholerae</em><br />
+Supervisor: Dr. Ling Chin Hwang</p>
+</article>
+<h1 id="animations">Animations</h1>
+<article>
+<h3 id="rep-helicase-with-fret-dyes">Rep helicase with FRET dyes</h3>
+<video controls="controls" loop="loop" muted="muted" playsinline="playsinline" preload="metadata" src="moleculeanims/repvidwithglo0001-0600.mp4"></video>
+<p>An animation of the DNA helicase Rep, labelled with a pair of FRET dyes.</p>
+</article>
+<p><strong><a href="articles/animations/">View all animations...</a></strong></p>
+    <nav id="page-controls">
+      <a href="#content" id="return-top">
+        <i class="fa fa-arrow-up" alt="⇧"></i> Return to top
+      </a>
+    </nav>
+  </main>
+  </content>
+  <footer id="footer">
+    
+
+<p>Compiled from markdown using <a href="https://www.mkdocs.org/">MkDocs</a>, hosted via <a href="https://pages.github.com/">GitHub Pages</a>. Theme by <a href="https://toddparsons.co.uk">Todd Parsons</a>.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+<a id=page-source href=https://github.com/BenjaminAmbrose/benambrose><i class="fa-brands fa-github"></i> Page source</a>
+
+
+
+<script src="assets/autoplay.js"></script>
+
+<script src="search/main.js"></script>
+
+  </footer>
+</body>
+
+</html>
